@@ -1,0 +1,27 @@
+.light-theme {
+    @apply bg-white
+}
+
+.light-theme .nav-item {
+    @apply text-primary
+}
+
+.light-theme .line-left {
+    @apply w-1/2 -mr-4 border-b-2 border-primary
+}
+
+.light-theme .line-right {
+    @apply w-1/2 -ml-4 border-b-2 border-primary
+}
+
+.light-theme .company_name {
+    @apply text-primary
+}
+
+.light-theme .title {
+    @apply text-primary
+}
+
+.light-theme .sub_title {
+    @apply text-primary
+}

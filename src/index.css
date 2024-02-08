@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./assets/fonts/Gilroy/Gilroy-Bold.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("./assets/fonts/Gilroy/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("./assets/fonts/Gilroy/Gilroy-Black.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-MediumItalic";
+  src: url("./assets/fonts/Gilroy/Gilroy-MediumItalic.ttf");
+}
+
+
+.nav-item {
+  @apply inline-block rounded py-1 px-3 text-xl uppercase font-Gilroy-Bold
+}
+
+.nav-item.active {
+  @apply bg-active !text-primary
+}
+
+.header {
+  @apply bg-transparent pt-5
+}
+
+.logo-container {
+  @apply flex items-center w-full bg-transparent h-16 lg:-mt-4
+}
+
+.media_icon {
+  @apply m-auto text-xl text-white cursor-pointer
+}
+
+.media_container {
+  @apply space-y-6 lg:hidden flex flex-col bg-active w-fit py-3 pl-3 pr-2 rounded-l-xl absolute top-1/2 -translate-y-1/2 right-0
+}
+
+.media_container .media_icon {
+  @apply m-auto text-xl text-primary
+}
+
+.title {
+  @apply text-4xl sm:text-5xl font-Gilroy-Black leading-none
+}
+
+.sub_title {
+  @apply text-2xl sm:text-3xl mt-10 font-Gilroy-MediumItalic
+}
+
+.company_name {
+  @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest
 }

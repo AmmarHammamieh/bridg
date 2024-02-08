@@ -1,0 +1,27 @@
+.dark-theme {
+    @apply bg-primary
+}
+
+.dark-theme .nav-item {
+    @apply text-white
+}
+
+.dark-theme .line-left {
+    @apply w-1/2 -mr-4 border-b-2 border-[fffffa]
+}
+
+.dark-theme .line-right {
+    @apply w-1/2 -ml-4 border-b-2 border-[fffffa]
+}
+
+.dark-theme .company_name {
+    @apply text-white
+}
+
+.dark-theme .title {
+    @apply text-white
+}
+
+.dark-theme .sub_title {
+    @apply text-white
+}
