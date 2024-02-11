@@ -43,7 +43,7 @@ function Form() {
                     BRIDG
                 </span>
             </div>
-            <div className='mx-auto w-[90%] xl:w-[60%] form  pt-5'>
+            <div className='mx-auto w-[90%] md:w-[95%] lg:w-[70%] xl:w-[60%] form  pt-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className="field">
