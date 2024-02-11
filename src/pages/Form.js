@@ -39,11 +39,11 @@ function Form() {
                     <LogoImg />
                     <hr className='line-right !mt-0' />
                 </div>
-                <span className='company_name'>
+                <span className='company_name text-center'>
                     Bridge AI Agency Onboarding
                 </span>
             </div>
-            <div className='mx-auto w-[90%] md:w-[95%] lg:w-[70%] xl:w-[60%] form  pt-5'>
+            <div className='mx-auto w-[90%] md:w-[95%] lg:w-[70%] xl:w-[60%] form  py-10 md:pt-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className="field">
@@ -54,7 +54,7 @@ function Form() {
                                     className=''
                                     {...register('name')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Name</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Name</span>
                             </label>
                             <div className="error">{errors.name?.message}</div>
                         </div>
@@ -65,7 +65,7 @@ function Form() {
                                     placeholder="example@gmail.com"
                                     {...register('email')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Email</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Email</span>
                             </label>
                             <div className="error">{errors.email?.message}</div>
                         </div>
@@ -76,7 +76,7 @@ function Form() {
                                     placeholder="http://example"
                                     {...register('facebookAccount')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Facebook Account</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Facebook Account</span>
                             </label>
                             <div className="error">{errors.facebookAccount?.message}</div>
                         </div>
@@ -87,7 +87,7 @@ function Form() {
                                     placeholder="+95503231321"
                                     {...register('WhatsApp_B_Phone')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>WhatsApp Business Phone Number</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>WhatsApp Business Phone Number</span>
                             </label>
                             <div className='text-white text-sm pt-1 ps-1'>Note : Not previously used as WhatsApp Account</div>
                             <div className="error">{errors.WhatsApp_B_Phone?.message}</div>
@@ -99,7 +99,7 @@ function Form() {
                                     placeholder="3 Avenue"
                                     {...register('address')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Address</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Address</span>
                             </label>
                             <div className="error">{errors.address?.message}</div>
                         </div>
@@ -110,7 +110,7 @@ function Form() {
                                     placeholder="USA"
                                     {...register('country')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Country</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Country</span>
                             </label>
                             <div className="error">{errors.country?.message}</div>
                         </div>
@@ -121,7 +121,7 @@ function Form() {
                                     placeholder="6666666"
                                     {...register('tel_1')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Telephone 1</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Telephone 1</span>
                             </label>
                             <div className="error">{errors.tel_1?.message}</div>
                         </div>
@@ -132,7 +132,7 @@ function Form() {
                                     placeholder="6666666"
                                     {...register('tel_2')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Telephone 2</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Telephone 2</span>
                             </label>
                             <div className="error">{errors.tel_2?.message}</div>
                         </div>
@@ -143,7 +143,7 @@ function Form() {
                                     placeholder="+963999999"
                                     {...register('mobile_1')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Mobile 1</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Mobile 1</span>
                             </label>
                             <div className="error">{errors.mobile_1?.message}</div>
                         </div>
@@ -154,7 +154,7 @@ function Form() {
                                     placeholder="+963999999"
                                     {...register('mobile_2')}
                                 />
-                                <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Mobile 2</span>
+                                <span className='text-lg md:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>Mobile 2</span>
                             </label>
                             <div className="error">{errors.mobile_2?.message}</div>
                         </div>
