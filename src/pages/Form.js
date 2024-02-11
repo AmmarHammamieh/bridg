@@ -89,6 +89,7 @@ function Form() {
                                 />
                                 <span className='text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200 input-text'>WhatsApp Business Phone Number</span>
                             </label>
+                            <div className='text-white text-sm pt-1 ps-1'>Note : Not previously used as WhatsApp Account</div>
                             <div className="error">{errors.WhatsApp_B_Phone?.message}</div>
                         </div>
                         <div className="field">
