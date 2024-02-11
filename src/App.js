@@ -7,13 +7,14 @@ import {
 import './assets/css/dark.css'
 import './assets/css/light.css'
 import Home from './pages/Home';
-import 'flowbite'
+import About from './pages/About';
 function App() {
   return (
     <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </div>

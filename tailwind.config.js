@@ -2,7 +2,6 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -21,8 +20,6 @@ module.exports = {
       'Gilroy-Regular': ['Gilroy-Regular'],
     }
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [],
 }
 

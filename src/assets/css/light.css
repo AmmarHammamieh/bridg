@@ -7,11 +7,11 @@
 }
 
 .light-theme .line-left {
-    @apply w-1/2 -mr-4 border-b-2 border-primary
+    @apply w-1/2 -mr-[1.1rem] border-b-2 border-primary
 }
 
 .light-theme .line-right {
-    @apply w-1/2 -ml-4 border-b-2 border-primary
+    @apply w-1/2 -ml-[1.1rem] border-b-2 border-primary
 }
 
 .light-theme .company_name {
@@ -23,5 +23,17 @@
 }
 
 .light-theme .sub_title {
+    @apply text-primary
+}
+
+#logo .cls-1 {
+    stroke: #2d4260;
+}
+
+.light-theme .media_icon {
+    @apply text-primary
+}
+
+.light-theme label {
     @apply text-primary
 }

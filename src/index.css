@@ -28,8 +28,13 @@
   @apply inline-block rounded py-1 px-3 text-xl uppercase font-Gilroy-Bold
 }
 
+.content {
+  min-height: calc(100vh - 180px);
+  max-height: 100%;
+}
+
 .nav-item.active {
-  @apply bg-active !text-primary
+  @apply bg-active !text-primary w-full
 }
 
 .header {
@@ -41,7 +46,7 @@
 }
 
 .media_icon {
-  @apply m-auto text-xl text-white cursor-pointer
+  @apply m-auto text-xl cursor-pointer
 }
 
 .media_container {
@@ -49,7 +54,7 @@
 }
 
 .media_container .media_icon {
-  @apply m-auto text-xl text-primary
+  @apply m-auto text-xl !text-primary
 }
 
 .title {
@@ -62,4 +67,26 @@
 
 .company_name {
   @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest
+}
+
+label {
+  @apply text-xl font-Gilroy-MediumItalic text-primary
+}
+
+.btn {
+  @apply px-3 py-1 text-xl font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-3xl mx-auto
+}
+
+input[type='text'] {
+  @apply rounded-3xl font-Gilroy-Regular border-primary border-2 py-1
+}
+
+#logo {
+  width: 5rem;
+}
+
+.cls-1 {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
 }

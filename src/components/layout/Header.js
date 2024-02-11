@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFacebookF } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { BsList } from "react-icons/bs";
-import logo from '../assets/images/logo.webp';
+import { NavLink } from 'react-router-dom';
+import LogoImg from './LogoImg';
 function Header() {
+    const [navToggle, setNavToggle] = useState()
     return (
         <nav className="header">
-            <div className="flex flex-wrap items-center justify-between px-5">
+            <div className="flex flex-wrap items-center justify-between px-5 z-[1] relative">
                 <ul className="space-x-10 hidden lg:flex">
                     <li>
-                        <a className="nav-item active" href="#">Home</a>
+                        <NavLink to="/" className="nav-item">Home</NavLink>
                     </li>
                     <li>
-                        <a className="nav-item" href="#">About</a>
+                        <NavLink to="/about" className="nav-item">About</NavLink>
                     </li>
                     <li>
                         <a className="nav-item" href="#">Features</a>
@@ -34,30 +36,28 @@ function Header() {
                         <FaYoutube />
                     </li>
                 </ul>
-                <button className="ml-auto p-1 text-sm rounded-lg lg:hidden bg-active" data-collapse-toggle="navbar-hamburger" type="button" aria-controls="navbar-hamburger" aria-expanded="false">
+                <button className="ml-auto p-1 text-sm rounded-lg lg:hidden bg-active" type="button" onClick={() => setNavToggle(!navToggle)}>
                     <BsList className='text-4xl' />
                 </button>
-                <div className="hidden lg:hidden w-full" id="navbar-hamburger">
+                <div className={`${navToggle ? "" : "hidden"}  lg:hidden w-full`}>
                     <ul className="flex flex-col space-y-2 my-4 rounded-lg bg-transparent">
                         <li>
-                            <a href="#" className="nav-item active w-full" aria-current="page">Home</a>
+                            <NavLink to="/" className="nav-item w-full" aria-current="page">Home</NavLink>
                         </li>
                         <li>
-                            <a href="#" className="nav-item">Services</a>
+                            <NavLink to="/about" className="nav-item">About</NavLink>
                         </li>
                         <li>
-                            <a href="#" className="nav-item">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#" className="nav-item">Contact</a>
+                            <a href="#" className="nav-item">Features</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center z-0 relative'>
                 <div className='logo-container'>
                     <hr className='line-left' />
-                    <img src={logo} />
+                    {/* <img src={logo} /> */}
+                    <LogoImg />
                     <hr className='line-right' />
                 </div>
                 <span className='company_name'>

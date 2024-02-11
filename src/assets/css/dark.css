@@ -25,3 +25,15 @@
 .dark-theme .sub_title {
     @apply text-white
 }
+
+.dark-theme #logo .cls-1 {
+    stroke: #fffffa;
+}
+
+.dark-theme .media_icon {
+    @apply text-white
+}
+
+.dark-theme label {
+    @apply text-white
+}
