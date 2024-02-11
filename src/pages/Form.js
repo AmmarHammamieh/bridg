@@ -16,7 +16,7 @@ const schema = z.object({
     mobile_2: z.string().regex(phoneRegex, 'Invalid Number!'),
     tel_1: z.string().regex(phoneRegex, 'Invalid Number!'),
     tel_2: z.string().regex(phoneRegex, 'Invalid Number!'),
-    facebookAccount: string(),
+    facebookAccount: string().min(2),
     WhatsApp_B_Phone: z.string().regex(phoneRegex, 'Invalid Number!'),
     address: z.string().min(2),
     country: z.string().min(2),
@@ -40,7 +40,7 @@ function Form() {
                     <hr className='line-right !mt-0' />
                 </div>
                 <span className='company_name'>
-                    BRIDG
+                    Bridge AI Agency Onboarding
                 </span>
             </div>
             <div className='mx-auto w-[90%] md:w-[95%] lg:w-[70%] xl:w-[60%] form  pt-5'>
