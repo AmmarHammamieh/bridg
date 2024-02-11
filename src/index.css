@@ -74,7 +74,7 @@ label {
 }
 
 .btn {
-  @apply px-3 py-1 text-xl font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-3xl mx-auto
+  @apply px-3 py-1 text-xl font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-lg mx-auto
 }
 
 input[type='text'] {
@@ -89,4 +89,37 @@ input[type='text'] {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 2px;
+}
+
+.form input[type="text"]:focus~.input-text,
+input[type="text"]:not(:placeholder-shown)~.input-text {
+  @apply text-active transform -translate-y-11 -translate-x-2 scale-100 text-base;
+}
+
+.form input[type="text"]:not(:placeholder-shown)~.input-text {
+  @apply text-white
+}
+
+.form input[type="text"]:focus {
+  @apply outline-none transition-opacity duration-500 placeholder-opacity-70
+}
+
+.form input[type="text"] {
+  @apply w-full px-3 py-1 text-base text-primary border-white border-2 rounded-lg border-opacity-50 outline-none focus:border-active placeholder-gray-600 placeholder-opacity-0 placeholder:text-sm transition duration-200
+}
+
+.field {
+  @apply w-full
+}
+
+.field label {
+  @apply block relative w-full font-Gilroy-Regular
+}
+
+.field label span {
+  @apply font-Gilroy-MediumItalic
+}
+
+.error {
+  @apply text-red-500 text-xs italic
 }
