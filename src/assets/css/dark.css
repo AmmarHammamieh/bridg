@@ -2,6 +2,20 @@
     @apply bg-primary
 }
 
+html:has(.dark-theme)::-webkit-scrollbar {
+    width: 5px;
+}
+
+html:has(.dark-theme)::-webkit-scrollbar-track {
+    @apply bg-primary 
+}
+
+/* Handle */
+html:has(.dark-theme)::-webkit-scrollbar-thumb {
+    @apply bg-white rounded-md
+}
+
+
 .dark-theme .nav-item {
     @apply text-white
 }

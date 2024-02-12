@@ -9,6 +9,7 @@ import './assets/css/light.css'
 import Home from './pages/Home';
 import About from './pages/About';
 import Form from './pages/Form';
+import FormRent from './pages/FormRent';
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/form_rent" element={<FormRent />} />
         </Routes>
       </Router>
     </div>

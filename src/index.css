@@ -66,11 +66,11 @@
 }
 
 .company_name {
-  @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest
+  @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest text-center w-3/4 sm:w-auto
 }
 
 label {
-  @apply text-xl font-Gilroy-MediumItalic text-primary
+  @apply text-base md:text-xl font-Gilroy-MediumItalic text-primary
 }
 
 .btn {
@@ -91,20 +91,27 @@ input[type='text'] {
   stroke-width: 2px;
 }
 
-.form input[type="text"]:focus~.input-text,
-input[type="text"]:not(:placeholder-shown)~.input-text {
+.input-text {
+  @apply text-base sm:text-base md:text-lg lg:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200
+}
+
+/* animation */
+.form .input:focus~.input-text,
+.form .input:not(:placeholder-shown)~.input-text {
   @apply text-active transform -translate-y-11 -translate-x-2 scale-100 text-base;
 }
 
-.form input[type="text"]:not(:placeholder-shown)~.input-text {
+.form .input:not(:placeholder-shown)~.input-text {
   @apply text-white
 }
 
-.form input[type="text"]:focus {
+.form .input:focus {
   @apply outline-none transition-opacity duration-500 placeholder-opacity-70
 }
 
-.form input[type="text"] {
+/* end-animation */
+
+.form .input {
   @apply w-full px-3 py-1 text-base text-primary border-white border-2 rounded-lg border-opacity-50 outline-none focus:border-active placeholder-gray-600 placeholder-opacity-0 placeholder:text-sm transition duration-200
 }
 
@@ -122,4 +129,8 @@ input[type="text"]:not(:placeholder-shown)~.input-text {
 
 .error {
   @apply text-red-500 text-xs italic
+}
+
+.react-datepicker-wrapper {
+  @apply w-full
 }
