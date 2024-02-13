@@ -155,13 +155,15 @@ function FormRent() {
                                 <DatePicker
                                     selected={field.value}
                                     onChange={(date) => handleDateChange(date)}
-                                    name='picker'
+                                    id='moving_date'
                                     placeholderText='1/1/2000'
                                     shouldCloseOnSelect={true}
                                     className='input'
                                     onFocus={() => !field.value && datePickerText.current.classList.add("!text-active", "!transform", "!-translate-y-11", "!-translate-x-2", "!scale-100", "!text-base")}
                                     onBlur={() => !field.value && datePickerText.current.classList.remove("!text-active", "!transform", "!-translate-y-11", "!-translate-x-2", "!scale-100", "!text-base")} />
-                                <span ref={datePickerText} className='input-text'>Earliest moving date</span>
+                                <label htmlFor='moving_date' className='!static'>
+                                    <span ref={datePickerText} className='input-text'>Earliest moving date</span>
+                                </label>
                             </div>
                             <div className="error">{errors.moving_date?.message}</div>
                         </div>
