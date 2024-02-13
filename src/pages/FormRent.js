@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Controller, useController, useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { string, date, z, number } from 'zod'
@@ -17,11 +17,12 @@ function FormRent() {
         requirement: string().min(2),
     })
     const schema = z.object(validation)
-    const { register, control, handleSubmit, formState, getValues, setValue } = useForm({ resolver: zodResolver(schema) });
+    const datePickerText = useRef()
+    const { register, control, handleSubmit, formState, getValues, setValue } = useForm({ resolver: zodResolver(schema), defaultValues: { "occupation": "Student" } });
     const { errors } = formState;
     const [petField, setPetField] = useState(false)
     const { field } = useController({ name: "moving_date", control });
-
+    const [occupation, setOccupation] = useState("Student")
     const onSubmit = (data) => {
         console.log(data);
     };
@@ -33,7 +34,7 @@ function FormRent() {
             }, {}
             )
     }
-    const handleChange = (e) => {
+    const handlePetCheck = (e) => {
         setPetField(e.target.checked)
         if (e.target.checked) {
             setValidation({
@@ -44,6 +45,15 @@ function FormRent() {
             setValidation(removeKeyObject(validation, 'pet_breeds'))
         }
     };
+    const handleSelect = (e) => {
+        setOccupation(e.target.value)
+        setValue("occupation", e.target.value)
+    };
+    const handleDateChange = (date) => {
+        field.onChange(date)
+        datePickerText.current.classList.remove("!text-active")
+        datePickerText.current.classList.add("!text-white")
+    }
     return (
         <div className='dark-theme min-h-screen max-h-full w-full overflow-auto py-5'>
             <div className='flex flex-col items-center'>
@@ -74,10 +84,11 @@ function FormRent() {
                         <div className="field">
                             <label>
                                 <select
+                                    defaultValue="Student"
                                     className='input'
-                                    {...register('occupation')}
+                                    ref-setter={register('occupation')}
+                                    onChange={handleSelect}
                                 >
-                                    <option selected hidden></option>
                                     <option>Working</option>
                                     <option>Student</option>
                                 </select>
@@ -85,7 +96,7 @@ function FormRent() {
                             </label>
                             <div className="error">{errors.occupation?.message}</div>
                         </div>
-                        <div className="field">
+                        <div className={`field ${occupation == "Student" ? "hidden" : ""}`}>
                             <label>
                                 <input
                                     type='text'
@@ -98,7 +109,7 @@ function FormRent() {
                             <div className="error">{errors.total_annual?.message}</div>
                         </div>
                         <div className='md:col-span-2 space-y-2'>
-                            <div className="field">
+                            <div className={`field ${occupation == "Working" ? "hidden" : ""}`}>
                                 <label className='!w-fit cursor-pointer'>
                                     <input
                                         type='checkbox'
@@ -119,7 +130,7 @@ function FormRent() {
                                     <input
                                         id='pets'
                                         type='checkbox'
-                                        onChange={handleChange}
+                                        onChange={handlePetCheck}
                                     />
                                     <span className='ms-2'>Pets?</span>
                                 </label>
@@ -141,14 +152,16 @@ function FormRent() {
                         </div>
                         <div className="field">
                             <div className='relative'>
-                                <p className='m-0 !text-white font-Gilroy-MediumItalic text-base absolute -top-6'>Earliest moving date</p>
                                 <DatePicker
                                     selected={field.value}
-                                    onChange={(date) => field.onChange(date)}
+                                    onChange={(date) => handleDateChange(date)}
                                     name='picker'
                                     placeholderText='1/1/2000'
                                     shouldCloseOnSelect={true}
-                                    className='input' />
+                                    className='input'
+                                    onFocus={() => !field.value && datePickerText.current.classList.add("!text-active", "!transform", "!-translate-y-11", "!-translate-x-2", "!scale-100", "!text-base")}
+                                    onBlur={() => !field.value && datePickerText.current.classList.remove("!text-active", "!transform", "!-translate-y-11", "!-translate-x-2", "!scale-100", "!text-base")} />
+                                <span ref={datePickerText} className='input-text'>Earliest moving date</span>
                             </div>
                             <div className="error">{errors.moving_date?.message}</div>
                         </div>
