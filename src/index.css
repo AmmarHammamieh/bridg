@@ -29,8 +29,9 @@
 }
 
 .content {
-  min-height: calc(100vh - 180px);
-  max-height: 100%;
+  /* min-height: calc(100vh - 180px);
+  max-height: 100%; */
+  @apply h-full min-h-screen mx-auto w-[90%] xl:w-3/4 flex
 }
 
 .nav-item.active {
@@ -38,7 +39,7 @@
 }
 
 .header {
-  @apply bg-transparent pt-5
+  @apply bg-transparent pt-5 fixed top-0 w-full z-10
 }
 
 .logo-container {
@@ -50,7 +51,7 @@
 }
 
 .media_container {
-  @apply space-y-6 lg:hidden flex flex-col bg-active w-fit py-3 pl-3 pr-2 rounded-l-xl absolute top-1/2 -translate-y-1/2 right-0
+  @apply space-y-6 fixed lg:hidden flex flex-col bg-active w-fit py-3 pl-3 pr-2 rounded-l-xl top-1/2 -translate-y-1/2 right-0
 }
 
 .media_container .media_icon {
@@ -65,6 +66,18 @@
   @apply text-2xl sm:text-3xl mt-10 font-Gilroy-MediumItalic
 }
 
+.list {
+  list-style: disc;
+}
+
+.list_title {
+  @apply text-2xl font-Gilroy-Black
+}
+
+.list li {
+  @apply text-xl font-Gilroy-MediumItalic ms-5
+}
+
 .company_name {
   @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest text-center w-3/4 sm:w-auto
 }
@@ -77,9 +90,6 @@ label {
   @apply px-3 py-1 text-xl font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-lg mx-auto
 }
 
-input[type='text'] {
-  @apply rounded-3xl font-Gilroy-Regular border-primary border-2 py-1
-}
 
 #logo {
   width: 5rem;
@@ -92,27 +102,16 @@ input[type='text'] {
 }
 
 .input-text {
-  @apply text-base sm:text-base md:text-lg lg:text-xl text-gray-600 text-opacity-80 absolute left-2 top-1/2 -translate-y-1/2 px-1 transition duration-200
+  @apply text-base sm:text-base md:text-lg lg:text-xl text-gray-600 text-opacity-80 absolute left-2 top-6 -translate-y-5 px-1 transition duration-200
 }
 
-/* animation */
-.form .input:focus~.input-text,
-.form .input:not(:placeholder-shown)~.input-text {
-  @apply text-active transform -translate-y-11 -translate-x-2 scale-100 text-base;
-}
-
-.form .input:not(:placeholder-shown)~.input-text {
-  @apply text-white
-}
-
-.form .input:focus {
+.input:focus {
   @apply outline-none transition-opacity duration-500 placeholder-opacity-70
 }
 
-/* end-animation */
-
-.form .input {
-  @apply w-full px-3 py-1 text-base text-primary border-white border-2 rounded-lg border-opacity-50 outline-none focus:border-active placeholder-gray-600 placeholder-opacity-0 placeholder:text-sm transition duration-200
+.input:focus~.input-text,
+.input:not(:placeholder-shown)~.input-text {
+  @apply text-active transform -translate-y-12 -translate-x-2 scale-100 text-base;
 }
 
 .field {

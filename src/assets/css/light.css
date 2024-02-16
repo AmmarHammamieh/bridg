@@ -2,6 +2,19 @@
     @apply bg-white
 }
 
+html:has(.light-theme)::-webkit-scrollbar {
+    width: 5px;
+}
+
+html:has(.light-theme)::-webkit-scrollbar-track {
+    @apply bg-white
+}
+
+html:has(.light-theme)::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-md
+}
+
+
 .light-theme .nav-item {
     @apply text-primary
 }
@@ -35,5 +48,28 @@
 }
 
 .light-theme label {
+    @apply text-primary
+}
+
+.light-theme .input:not(:placeholder-shown)~.input-text {
+    @apply text-primary
+}
+
+
+.light-theme .input:not(:placeholder-shown).demo~.input-text {
+    @apply text-primary
+}
+
+
+.light-theme .input {
+    @apply w-full px-3 py-1 text-base text-primary border-primary border-2 rounded-lg outline-none focus:border-active placeholder-gray-600 placeholder-opacity-0 placeholder:text-sm transition duration-200
+}
+
+
+.list_title {
+    @apply text-primary
+}
+
+.list li {
     @apply text-primary
 }

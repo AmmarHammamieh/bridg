@@ -6,10 +6,10 @@ import { FaInstagram } from "react-icons/fa";
 import { BsList } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
 import LogoImg from './LogoImg';
-function Header() {
+function Header({ headerRef }) {
     const [navToggle, setNavToggle] = useState()
     return (
-        <nav className="header">
+        <nav ref={headerRef} className="header">
             <div className="flex flex-wrap items-center justify-between px-5 z-[1] relative">
                 <ul className="space-x-10 hidden lg:flex">
                     <li>

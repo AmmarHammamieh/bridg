@@ -10,9 +10,6 @@ module.exports = {
         'active': '#01f5ff',
         'primary': '#2d4260',
       },
-      backgroundImage: {
-        'home': "url('./assets/images/test2.png')",
-      }
     },
     fontFamily: {
       'Gilroy-Bold': ['Gilroy-Bold'],
