@@ -71,7 +71,7 @@
 }
 
 .list_title {
-  @apply text-2xl font-Gilroy-Black
+  @apply text-2xl font-Gilroy-Black my-5 lg:my-0
 }
 
 .list li {

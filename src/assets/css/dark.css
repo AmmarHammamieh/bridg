@@ -2,6 +2,10 @@
     @apply bg-primary
 }
 
+.dark-theme .header {
+    @apply bg-primary
+}
+
 html:has(.dark-theme)::-webkit-scrollbar {
     width: 5px;
 }

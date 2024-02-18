@@ -4,22 +4,23 @@ import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { BsList } from "react-icons/bs";
-import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import LogoImg from './LogoImg';
 function Header({ headerRef }) {
     const [navToggle, setNavToggle] = useState()
     return (
-        <nav ref={headerRef} className="header">
+        <nav ref={headerRef} className="header lg:!bg-transparent">
             <div className="flex flex-wrap items-center justify-between px-5 z-[1] relative">
                 <ul className="space-x-10 hidden lg:flex">
                     <li>
-                        <NavLink to="/" className="nav-item">Home</NavLink>
+                        <HashLink smooth to='/#intro' name="intro" className="nav-item active">Home</HashLink>
                     </li>
                     <li>
-                        <NavLink to="/about" className="nav-item">About</NavLink>
+                        <HashLink smooth to='/#about' name="about" className="nav-item">About</HashLink>
                     </li>
                     <li>
-                        <a className="nav-item" href="#">Features</a>
+                        <HashLink smooth to='/#features' name="features" className="nav-item">Features</HashLink>
                     </li>
                 </ul>
                 <ul className="space-x-6 hidden lg:flex">
@@ -42,13 +43,13 @@ function Header({ headerRef }) {
                 <div className={`${navToggle ? "" : "hidden"}  lg:hidden w-full`}>
                     <ul className="flex flex-col space-y-2 my-4 rounded-lg bg-transparent">
                         <li>
-                            <NavLink to="/" className="nav-item w-full" aria-current="page">Home</NavLink>
+                            <HashLink smooth to='/#intro' name="intro_mobile" className="nav-item w-full active">Home</HashLink>
                         </li>
                         <li>
-                            <NavLink to="/about" className="nav-item">About</NavLink>
+                            <HashLink smooth to='/#about' name="about_mobile" className="nav-item">About</HashLink>
                         </li>
                         <li>
-                            <a href="#" className="nav-item">Features</a>
+                            <HashLink smooth to='/#features' name="features_mobile" className="nav-item">Features</HashLink>
                         </li>
                     </ul>
                 </div>

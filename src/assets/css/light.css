@@ -2,6 +2,10 @@
     @apply bg-white
 }
 
+.light-theme .header {
+    @apply bg-white
+}
+
 html:has(.light-theme)::-webkit-scrollbar {
     width: 5px;
 }

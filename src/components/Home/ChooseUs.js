@@ -4,8 +4,8 @@ import rellable from '../../assets/images/chooseUs/rellable.png'
 import affordable from '../../assets/images/chooseUs/affordable.png'
 function ChooseUs() {
     return (
-        <div className='content pt-14'>
-            <div className='flex flex-col w-[91%]  pt-40 lg:pt-10 pb-5 lg:pb-0 gap-10 lg:gap-0 m-auto'>
+        <div className='content'>
+            <div className='flex flex-col w-[91%]  pt-40 lg:pt-0 pb-5 lg:pb-0 gap-10 lg:gap-0 m-auto'>
                 <div className='flex flex-col justify-center  text-center'>
                     <h1 className='title'>Why Choose Bridge ?</h1>
                     <p className='sub_title !mt-5'>Bridge is not a generic solution. It is designed to fit your estate agency goals and budget. Here are some of the benefits of choosing Bridge</p>

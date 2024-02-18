@@ -10,7 +10,7 @@ function Media() {
                 <img src={video} className='absolute top-0 h-full w-full object-fill max-h-full' />
             </picture>
             <div className='content '>
-                <span className='pt-48 lg:pt-44 mx-auto d-flex title z-[1]'>
+                <span className='pt-48 lg:pt-44 mx-auto d-flex title z-[1] !text-white'>
                     This Video
                 </span>
             </div>
