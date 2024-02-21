@@ -3,7 +3,7 @@
 }
 
 .light-theme .header {
-    @apply bg-white
+    @apply bg-white/30 backdrop-blur-md
 }
 
 html:has(.light-theme)::-webkit-scrollbar {
@@ -24,11 +24,11 @@ html:has(.light-theme)::-webkit-scrollbar-thumb {
 }
 
 .light-theme .line-left {
-    @apply w-1/2 -mr-[1.1rem] border-b-2 border-primary
+    @apply w-1/2 -mr-[0.85rem] border-b-2 border-primary
 }
 
 .light-theme .line-right {
-    @apply w-1/2 -ml-[1.1rem] border-b-2 border-primary
+    @apply w-1/2 -ml-[0.85rem] border-b-2 border-primary
 }
 
 .light-theme .company_name {

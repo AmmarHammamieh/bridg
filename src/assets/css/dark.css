@@ -3,7 +3,7 @@
 }
 
 .dark-theme .header {
-    @apply bg-primary
+    @apply bg-primary/30 backdrop-blur-md
 }
 
 html:has(.dark-theme)::-webkit-scrollbar {
@@ -24,11 +24,11 @@ html:has(.dark-theme)::-webkit-scrollbar-thumb {
 }
 
 .dark-theme .line-left {
-    @apply w-1/2 -mr-4 border-b-2 border-[fffffa]
+    @apply w-1/2 -mr-[0.85rem] border-b-2 border-[fffffa]
 }
 
 .dark-theme .line-right {
-    @apply w-1/2 -ml-4 border-b-2 border-[fffffa]
+    @apply w-1/2 -ml-[0.85rem] border-b-2 border-[fffffa]
 }
 
 .dark-theme .company_name {

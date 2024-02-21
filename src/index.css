@@ -23,14 +23,18 @@
   src: url("./assets/fonts/Gilroy/Gilroy-MediumItalic.ttf");
 }
 
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("./assets/fonts/Gilroy/Gilroy-SemiBold.ttf");
+}
+
 
 .nav-item {
-  @apply inline-block rounded py-1 px-3 text-xl uppercase font-Gilroy-Bold
+  @apply inline-block rounded py-1 px-3 text-base uppercase font-Gilroy-SemiBold tracking-wider
 }
 
 .content {
-  /* min-height: calc(100vh - 180px);
-  max-height: 100%; */
+  /* min-height: calc(100vh - 180px); */
   @apply h-full min-h-screen mx-auto w-[90%] xl:w-3/4 flex
 }
 
@@ -63,7 +67,7 @@
 }
 
 .sub_title {
-  @apply text-2xl sm:text-3xl mt-10 font-Gilroy-MediumItalic
+  @apply text-xl sm:text-xl mt-5 font-Gilroy-MediumItalic
 }
 
 .list {
@@ -71,15 +75,15 @@
 }
 
 .list_title {
-  @apply text-2xl font-Gilroy-Black my-5 lg:my-0
+  @apply text-xl font-Gilroy-Black my-5 lg:my-0
 }
 
 .list li {
-  @apply text-xl font-Gilroy-MediumItalic ms-5
+  @apply text-lg font-Gilroy-MediumItalic ms-5
 }
 
 .company_name {
-  @apply mt-5 text-2xl font-Gilroy-Regular tracking-widest text-center w-3/4 sm:w-auto
+  @apply text-xl font-Gilroy-Regular tracking-[0.2em] text-center w-3/4 sm:w-auto
 }
 
 label {
@@ -87,12 +91,12 @@ label {
 }
 
 .btn {
-  @apply px-3 py-1 text-xl font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-lg mx-auto
+  @apply px-3 py-1 text-base font-Gilroy-MediumItalic text-primary bg-active w-fit rounded-lg mx-auto
 }
 
 
 #logo {
-  width: 5rem;
+  width: 4rem;
 }
 
 .cls-1 {
@@ -102,7 +106,7 @@ label {
 }
 
 .input-text {
-  @apply text-base sm:text-base md:text-lg lg:text-xl text-gray-600 text-opacity-80 absolute left-2 top-6 -translate-y-5 px-1 transition duration-200
+  @apply text-base text-gray-400 text-opacity-80 absolute left-2 top-6 -translate-y-5 px-1 transition duration-200
 }
 
 .input:focus {

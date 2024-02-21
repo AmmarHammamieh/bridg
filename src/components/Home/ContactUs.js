@@ -24,7 +24,7 @@ function ContactUs({ ContactSection }) {
     return (
         <div ref={ContactSection} className='light-theme'>
             <div className='content'>
-                <div className=' w-[85%] md:w-[95%] lg:w-[70%] xl:w-[60%] form h-full mt-auto mx-auto pt-44 pb-5 lg:pt-0'>
+                <div className=' w-[85%] md:w-[95%] lg:w-[75%] xl:w-[65%] form h-full m-auto lg:pt-0'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-9 md:gap-8'>
                             <div className="field">
@@ -93,16 +93,16 @@ function ContactUs({ ContactSection }) {
                             className="btn !px-12 mt-4 m-auto flex select-none"
                             type="submit"
                         >
-                            Submit
+                            SUBMIT
                         </button>
                     </form>
-                    <p className='list_title'>Policies</p>
+                    <p className='list_title py-3'>POLICIES</p>
                     <ul className='list'>
                         <li>Privacy policy</li>
                         <li>Information Security policy</li>
                         <li>Please send all data inquiries to dpo@bridge.rent</li>
                     </ul>
-                    <p className='text-xl font-Gilroy-MediumItalic text-primary text-center mt-5'>© 2023 Bridge</p>
+                    <p className='text-lg font-Gilroy-MediumItalic text-primary text-center mt-5'>© 2023 Bridge</p>
                 </div>
             </div>
         </div>

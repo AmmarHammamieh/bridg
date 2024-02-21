@@ -16,6 +16,7 @@ module.exports = {
       'Gilroy-Black': ['Gilroy-Black'],
       'Gilroy-MediumItalic': ['Gilroy-MediumItalic'],
       'Gilroy-Regular': ['Gilroy-Regular'],
+      'Gilroy-SemiBold': ['Gilroy-SemiBold'],
     }
   },
   plugins: [

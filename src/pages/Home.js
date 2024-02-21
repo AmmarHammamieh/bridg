@@ -49,7 +49,19 @@ function Home() {
                         if (item.name.includes("about")) {
                             item.classList.add("active")
                         }
-                        if (item.name.includes("mobile")) {
+                        if (item.name.includes("about_mobile")) {
+                            item.classList.add("w-full")
+                        }
+                    }
+                }
+                if (joinSectionTop < 2 && Math.abs(joinSectionTop) < Math.abs(joinSection.current.getBoundingClientRect().height - headerRef.current.getBoundingClientRect().height)) {
+                    let nav_items = document.getElementsByClassName("nav-item")
+                    for (let item of nav_items) {
+                        item.classList.remove("active")
+                        if (item.name.includes("contact")) {
+                            item.classList.add("active")
+                        }
+                        if (item.name.includes("contact_us_mobile")) {
                             item.classList.add("w-full")
                         }
                     }
@@ -61,7 +73,7 @@ function Home() {
                         if (item.name.includes("intro")) {
                             item.classList.add("active")
                         }
-                        if (item.name.includes("mobile")) {
+                        if (item.name.includes("intro_mobile")) {
                             item.classList.add("w-full")
                         }
                     }
@@ -73,7 +85,7 @@ function Home() {
                         if (item.name.includes("features")) {
                             item.classList.add("active")
                         }
-                        if (item.name.includes("mobile")) {
+                        if (item.name.includes("features_mobile")) {
                             item.classList.add("w-full")
                         }
                     }

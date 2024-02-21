@@ -11,8 +11,8 @@ function Header({ headerRef }) {
     const [navToggle, setNavToggle] = useState()
     return (
         <nav ref={headerRef} className="header lg:!bg-transparent">
-            <div className="flex flex-wrap items-center justify-between px-5 z-[1] relative">
-                <ul className="space-x-10 hidden lg:flex">
+            <div className="flex flex-wrap items-center justify-between px-5 lg:px-10 z-[1] relative">
+                <ul className="space-x-5 hidden lg:flex">
                     <li>
                         <HashLink smooth to='/#intro' name="intro" className="nav-item active">Home</HashLink>
                     </li>
@@ -22,8 +22,11 @@ function Header({ headerRef }) {
                     <li>
                         <HashLink smooth to='/#features' name="features" className="nav-item">Features</HashLink>
                     </li>
+                    <li>
+                        <HashLink smooth to='/#contact_us' name="contact_us" className="nav-item">Contact Us</HashLink>
+                    </li>
                 </ul>
-                <ul className="space-x-6 hidden lg:flex">
+                <ul className="space-x-8 hidden lg:flex">
                     <li className="media_icon">
                         <FaInstagram />
                     </li>
@@ -51,6 +54,9 @@ function Header({ headerRef }) {
                         <li>
                             <HashLink smooth to='/#features' name="features_mobile" className="nav-item">Features</HashLink>
                         </li>
+                        <li>
+                            <HashLink smooth to='/#contact_us' name="contact_us_mobile" className="nav-item">Contact Us</HashLink>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +68,7 @@ function Header({ headerRef }) {
                     <hr className='line-right' />
                 </div>
                 <span className='company_name'>
-                    BRIDG
+                    BRIDGE
                 </span>
             </div>
         </nav>
