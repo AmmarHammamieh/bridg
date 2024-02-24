@@ -11,7 +11,7 @@ function Header({ headerRef }) {
     const [navToggle, setNavToggle] = useState()
     return (
         <nav ref={headerRef} className="header lg:!bg-transparent">
-            <div className="flex flex-wrap items-center justify-between px-5 lg:px-10 z-[1] relative">
+            <div className="flex flex-wrap items-center justify-between px-5 lg:px-10 z-[1] relative header_top">
                 <ul className="space-x-5 hidden lg:flex">
                     <li>
                         <HashLink smooth to='/#intro' name="intro" className="nav-item active">Home</HashLink>
@@ -60,7 +60,7 @@ function Header({ headerRef }) {
                     </ul>
                 </div>
             </div>
-            <div className='flex flex-col items-center z-0 relative'>
+            <div className='flex flex-col items-center z-0 relative header_bottom'>
                 <div className='logo-container'>
                     <hr className='line-left' />
                     {/* <img src={logo} /> */}

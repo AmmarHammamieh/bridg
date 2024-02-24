@@ -23,7 +23,7 @@ function ContactUs({ ContactSection }) {
     }
     return (
         <div ref={ContactSection} className='light-theme'>
-            <div className='content'>
+            <div className='content pb-2 lg:pb-0 !min-h-full lg:min-h-screen'>
                 <div className=' w-[85%] md:w-[95%] lg:w-[75%] xl:w-[65%] form h-full m-auto lg:pt-0'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-9 md:gap-8'>

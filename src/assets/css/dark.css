@@ -3,7 +3,9 @@
 }
 
 .dark-theme .header {
-    @apply bg-primary/30 backdrop-blur-md
+    box-shadow: -12px 17px 11px rgba(45, 66, 96, 0.6);
+    background: rgba(45, 66, 96, 0.6);
+    /* @apply bg-primary/30 backdrop-blur-sm */
 }
 
 html:has(.dark-theme)::-webkit-scrollbar {
