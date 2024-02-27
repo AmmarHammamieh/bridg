@@ -28,16 +28,16 @@ function Header({ headerRef }) {
                 </ul>
                 <ul className="space-x-8 hidden lg:flex">
                     <li className="media_icon">
-                        <FaInstagram />
+                        <a href='https://www.instagram.com/bridgeaiuk?igsh=aDJmY3JnanZ2NTdn' target='_blank'><FaInstagram /></a>
                     </li>
                     <li className="media_icon">
-                        <FaLinkedinIn />
+                        <a href='https://www.youtube.com/@Bridge-AI' target='_blank'><FaLinkedinIn /></a>
                     </li>
-                    <li className="media_icon">
+                    {/* <li className="media_icon">
                         <FaFacebookF />
-                    </li>
+                    </li> */}
                     <li className="media_icon">
-                        <FaYoutube />
+                        <a href='https://www.linkedin.com/company/bridge-ai-uk/' target='_blank'><FaYoutube /></a>
                     </li>
                 </ul>
                 <button className="ml-auto p-1 text-sm rounded-lg lg:hidden bg-active" type="button" onClick={() => setNavToggle(!navToggle)}>

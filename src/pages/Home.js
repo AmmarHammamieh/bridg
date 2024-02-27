@@ -10,6 +10,8 @@ import JoinUs from '../components/Home/JoinUs';
 import ContactUs from '../components/Home/ContactUs';
 import Intor from '../components/Home/Intor';
 import ScrollToTop from '../components/Home/ScrollToTop';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 function Home() {
     const headerRef = useRef(null);
     const demoSection = useRef(null);
@@ -20,7 +22,9 @@ function Home() {
     const introSection = useRef(null);
     const [theme, setTheme] = useState("dark-theme");
 
-
+    useEffect(() => {
+        Aos.init();
+    }, [])
     useEffect(() => {
         const updateHeaderState = () => {
             if (!headerRef.current || !demoSection.current) return; // Avoid errors if refs not set
